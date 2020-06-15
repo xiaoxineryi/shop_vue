@@ -1,0 +1,5 @@
+export const MENU_SUCCESS = 'MENU_SUCCESS'
+export const MENU_FAILED = 'MENU_FAILED'
+export const MENU_CHANGE = 'MENU_CHANGE'
+export const GOOD_SUCCESS = 'GOOD_SUCCESS'
+export const GOOD_FAILED = 'GOOD_FAILED'
