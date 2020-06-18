@@ -97,6 +97,8 @@
 				localStorage.removeItem("token");
 				this.$store.state.userName = '';
 				this.$store.state.token = '';
+				localStorage.removeItem("userName");
+				
 				this.logform = false;
 				this.signshow = false;
 				

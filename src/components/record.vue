@@ -24,12 +24,10 @@
 			}
 		},
 		computed:{
-			userName(){
-				return this.$route.params["userName"]
-			}
+
 		},
 		mounted(){
-			this.$api.getBuyRecord(this.$store.state.userName).then((res)=>{
+			this.$api.getBuyRecord(localStorage.getItem("userName")).then((res)=>{
 				this.list = res;
 				
 			})

@@ -32,6 +32,7 @@ export default {
 			this.$api.getUserByToken(token).then((rep)=>{
 				this.$store.state.userName = rep.userName;
 				this.$store.state.type = rep.type;
+				localStorage.setItem("userName",rep.userName);
 			}).catch((err)=>{
 				alert(err);
 			})

@@ -93,12 +93,14 @@ const updateShopInfo = function(form){
 
 const charge = function(userName,money){
 	return get(URL.charge,{"userName":userName,"chargeMoney":money}).then((res)=>{
+		
 		return res;
 	})
 }
 
 const addShop = function(form){
 	return post(URL.addShop,form).then((res)=>{
+		res.url = imgUrl + res.url;
 		return res;
 	})
 }

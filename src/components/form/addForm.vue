@@ -57,7 +57,7 @@
 		fileList:[],
 		form:{
 			type:'',
-			sellerName:this.$store.state.userName,
+			sellerName:localStorage.getItem("userName"),
 			shopName:'',
 			price:0,
 			left:0,
@@ -93,7 +93,7 @@
 		  submitForm.append("type",this.form.type)
 		  // alert(this.form.type)
 		  this.$api.addShop(submitForm).then((res)=>{
-			  alert(res);
+
 			  this.$emit('addInfo',res);
 			  this.$emit('disshow')
 		  })

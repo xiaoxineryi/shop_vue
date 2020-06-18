@@ -43,6 +43,7 @@
 					this.$store.state.token = res.token;
 					this.$store.state.type = res.type;
 					localStorage.setItem("token",res.token);
+					localStorage.setItem("userName",res.userName);
 					this.$emit('disshow');
 					this.form.userName = '';
 					this.form.password = '';

@@ -97,11 +97,11 @@
 	  },
 	  addInfo(data){
 		  this.tableData.push(data)
-		  alert(data)
+
 	  }
     },
 	mounted() {
-		this.$api.getsellshops(this.$store.state.userName).then((res)=>{
+		this.$api.getsellshops(localStorage.getItem("userName")).then((res)=>{
 			this.tableData = res;	
 		})
 	},
