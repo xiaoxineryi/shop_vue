@@ -93,7 +93,9 @@
 		  submitForm.append("type",this.form.type)
 		  // alert(this.form.type)
 		  this.$api.addShop(submitForm).then((res)=>{
+			  alert(res);
 			  this.$emit('addInfo',res);
+			  this.$emit('disshow')
 		  })
 	  },
 	  

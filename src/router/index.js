@@ -7,6 +7,7 @@ import Record from '../components/record.vue'
 import SellerList from '../components/sellerlist.vue'
 import sellRecord from '../components/sellRecord.vue'
 import sellEdit from '../components/sellEdit.vue'
+import shopDelete from '../components/sellDelete.vue'
 
 Vue.use(Router)
 
@@ -34,6 +35,12 @@ const router = new Router({
 			]
 		},
 		{
+			path:'/adminstrator/shopDelete',
+			name:'shopDelete',
+			component:shopDelete,
+			
+		},
+		{
 			path:'/record/:userName',
 			name:"buyRecord",
 			component:Record
@@ -57,7 +64,7 @@ const router = new Router({
 					component:sellEdit
 				}
 			]
-		}
+		},
 	]
 });
 

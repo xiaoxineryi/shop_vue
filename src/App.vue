@@ -25,7 +25,7 @@ export default {
 		  getMenu:'menu'
 	  })
   },
-  mounted() {
+  created() {
 	    this.getMenu();
 		var token = localStorage.getItem('token');
 		if(token){

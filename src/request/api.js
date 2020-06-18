@@ -103,6 +103,21 @@ const addShop = function(form){
 	})
 }
 
+const deleteShop = function(shopID){
+	return get(URL.deleteShop,{"shopID":shopID}).then((res)=>{
+		return res;
+	})
+}
+
+const getAllShops = function(){
+	return get(URL.getAllShops).then((res)=>{
+		res.forEach(obj=>{
+			obj.url = imgUrl + obj.url;
+		})
+		return res;
+	})
+}
+
 export default {
 	sign,
 	log,
@@ -118,5 +133,7 @@ export default {
 	getsellshops,
 	getshopEditInfo,
 	updateShopInfo,
-	addShop
+	addShop,
+	deleteShop,
+	getAllShops
 }

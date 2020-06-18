@@ -23,7 +23,7 @@
 				  主页
 			  </i>
 		  </el-menu-item>
-		  <el-menu-item class="items" index="6">
+		  <el-menu-item class="items" index="6" v-if="userName">
 		  	  <i class="el-icon-s-goods" >
 		  		 <router-link :to="{name: 'buyRecord', params: { userName: this.$store.state.userName}}">
 					 已购商品
@@ -35,6 +35,9 @@
 		  </el-menu-item>
 		  <el-menu-item class="items" index="8" v-if="userName && type=='seller'">
 				  <i class="el-icon-s-operation" @click="to_sellerIndex"> 商家操作 </i>
+		  </el-menu-item>
+		  <el-menu-item class="items" index="8" v-if="userName && type=='adminstrator'">
+		  				  <i class="el-icon-s-operation" @click="to_delete"> 删除操作 </i>
 		  </el-menu-item>
 		</el-menu>
 		
@@ -104,6 +107,9 @@
 			},
 			to_sellerIndex(){
 				this.$router.push({name:'sellRecord',params:{'userName':this.userName}})
+			},
+			to_delete(){
+				this.$router.push({name:'shopDelete'})
 			}
 		},
 		components:{
